@@ -7,6 +7,8 @@ package 'ntp' do
 end 
 
 package 'git'
+package 'vim-enhanced'
+package 'nano'
 
 file '/etc/motd' do
 	content "This server is property of Hitesh"
