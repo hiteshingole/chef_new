@@ -10,8 +10,15 @@ package 'git'
 package 'vim-enhanced'
 package 'nano'
 
+node['ipaddress']
+
 file '/etc/motd' do
-	content "This server is property of Hitesh"
+	content "This server is property of Hitesh
+Hostname = #{node['hostname']}
+IpAddress = #{node['ipaddress']}
+CPU = #{node['cpu']['0']['mhz']}
+Ram= #{node['memory']['total']}
+"
 	owner 'root'
 	group 'root'
 end 
