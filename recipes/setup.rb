@@ -13,6 +13,12 @@ package 'nano'
 
 template '/etc/motd' do
 	source 'motd.erb'
+
+variables partials: {
+    'Author' => ' Hitesh',
+    'Test' => 'for chef',
+    'argument' => 'value',
+  }
 	action :create
     
 end 
